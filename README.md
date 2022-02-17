@@ -1,6 +1,6 @@
 # music
 
-##
+## Description
 
 Music application on vue, vuex, tailwind.css, firebase
 
