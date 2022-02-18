@@ -88,6 +88,18 @@ export default {
           return;
         }
 
+        if (!navigator.onLine) {
+          this.uploads.push({
+            task: {},
+            currentProgress: 100,
+            name: file.name,
+            variant: 'bg-red-400',
+            icon: 'fas fa-times',
+            textClass: 'text-red-400',
+          });
+          return;
+        }
+
         const storageRef = storage.ref(); // music-f0313.appspot.com
         const songsRef = storageRef.child(`songs/${file.name}`);
         const task = songsRef.put(file);
