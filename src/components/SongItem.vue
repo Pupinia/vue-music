@@ -1,7 +1,8 @@
 <template>
   <li
+    :class="`song-id-${song.docId}`"
     class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
+          duration-300 hover:bg-gray-50 example snapshot test"
   >
     <div>
       <router-link
